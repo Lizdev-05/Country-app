@@ -88,8 +88,16 @@ nav {
   margin-top: 1.5rem;
   border-radius: 0.5rem;
   display: none;
+}
 
-  /* display: flex; */
+.fa-circle-chevron-down{
+  background-color: var(--Dark-Blue);
+  font-size: 1rem;
+}
+.showdropdown {
+  margin-top: 1.5rem;
+  border-radius: 0.5rem;
+  display: flex;
   flex-direction: column;
   background-color: var(--Dark-Blue);
   min-width: 160px;
@@ -111,12 +119,14 @@ nav {
 main {
   margin: 0 auto;
 }
+
 .cards {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 1rem;
   margin-top: 2rem;
 }
+
 .card .card-image {
   background-color: var(--Dark-Blue);
   height: 13rem;
@@ -126,26 +136,31 @@ main {
   background-position: center;
   background-repeat: no-repeat;
 }
+
 .card .card-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
+
 .card .card-text {
   padding: 2rem 1rem;
   background-color: var(--Dark-Blue);
   line-height: 1.5;
 }
-.card-text span{
+
+.card-text span {
   line-height: 1.5;
   font-weight: 800;
 }
+
 .card .card-text h3 {
   font-size: 1.2rem;
   font-weight: 800;
   color: var(--White);
   margin-bottom: 1rem;
 }
+
 .card .card-text p {
   font-size: 1rem;
   color: var(--White);

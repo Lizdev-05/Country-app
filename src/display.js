@@ -1,8 +1,8 @@
-import e from "express";
-
 const API_URL = 'https://restcountries.com/v2/all';
 const cards = document.querySelector('.cards');
-const searchBtn = document.querySelectorAll('#search-box')
+const searchBtn = document.querySelector('#search-box');
+const dropBtn = document.querySelector('.dropbtn');
+const dropDownContent = document.querySelector('.dropdown-content');
 
 const showCountry = (data) => {
   const cardContainer = document.createElement('div');
@@ -13,7 +13,7 @@ const showCountry = (data) => {
   </div>
   <div class="card-text">
   <h3>${data.name}</h3>
-  <p><span>Population</span> ${data.population / 1000000}</p>
+  <p><span>Population</span> ${(data.population / 1000000)}</p>
   <p><span>Region:</span> ${data.region}</p>
   <p><span>Capital city:</span> ${data.capital}</p>
   </div>
@@ -34,4 +34,8 @@ export default display;
 
 searchBtn.addEventListener('click', () => {
   fetch(`https://restcountries.com/v2/${searchBtn.input}`);
-})
+});
+
+dropBtn.addEventListener('click', () => {
+  dropDownContent.classList.toggle('showdropdown');
+});
