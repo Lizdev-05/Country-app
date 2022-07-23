@@ -1,6 +1,5 @@
 const API_URL = 'https://restcountries.com/v2/all';
 const cards = document.querySelector('.cards');
-const searchBtn = document.querySelector('#search-box');
 const dropBtn = document.querySelector('.dropbtn');
 const dropDownContent = document.querySelector('.dropdown-content');
 
@@ -13,8 +12,8 @@ const showCountry = (data) => {
   </div>
   <div class="card-text">
   <h3>${data.name}</h3>
-  <p><span>Population</span> ${(data.population / 1000000)}</p>
-  <p><span>Region:</span> ${data.region}</p>
+  <p><span>Population</span> ${data.population / 1000000}</p>
+  <p class="regionName"><span>Region:</span> ${data.region}</p>
   <p><span>Capital city:</span> ${data.capital}</p>
   </div>
     `;
@@ -32,10 +31,26 @@ const display = async () => {
 display();
 export default display;
 
-searchBtn.addEventListener('click', () => {
-  fetch(`https://restcountries.com/v2/${searchBtn.input}`);
-});
-
 dropBtn.addEventListener('click', () => {
   dropDownContent.classList.toggle('showdropdown');
+});
+
+const region = document.querySelectorAll('.region');
+const regionName = document.getElementsByClassName('regionName');
+
+region.forEach((element) => {
+  element.addEventListener('click', () => {
+    console.log(element);
+    Array.from(regionName).forEach((elem) => {
+      console.log(elem);
+      if (
+        elem.innerText.includes(element.innerText) ||
+        element.innerText === 'All'
+      ) {
+        elem.closest('.card').style.display = 'grid';
+      } else {
+        elem.closest('.card').style.display = 'none';
+      }
+    });
+  });
 });

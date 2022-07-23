@@ -90,7 +90,7 @@ nav {
   display: none;
 }
 
-.fa-circle-chevron-down{
+.fa-circle-chevron-down {
   background-color: var(--Dark-Blue);
   font-size: 1rem;
 }
@@ -104,7 +104,9 @@ nav {
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
   z-index: 1;
 }
-
+.dropdown-content li {
+  list-style: none;
+}
 .dropdown-content a {
   color: var(--White);
   padding: 12px 16px;
