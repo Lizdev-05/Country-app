@@ -136,6 +136,10 @@ main {
   background-color: var(--Dark-Blue);
   line-height: 1.5;
 }
+.card-text span{
+  line-height: 1.5;
+  font-weight: 800;
+}
 .card .card-text h3 {
   font-size: 1.2rem;
   font-weight: 800;
