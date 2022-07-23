@@ -132,7 +132,7 @@ main {
   object-fit: cover;
 }
 .card .card-text {
-  padding: 2rem;
+  padding: 2rem 1rem;
   background-color: var(--Dark-Blue);
   line-height: 1.5;
 }
