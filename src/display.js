@@ -43,8 +43,8 @@ region.forEach((element) => {
   element.addEventListener('click', () => {
     Array.from(regionName).forEach((elem) => {
       if (
-        elem.innerText.includes(element.innerText) ||
-        element.innerText === 'All'
+        elem.innerText.includes(element.innerText)
+        || element.innerText === 'All'
       ) {
         elem.closest('.card').style.display = 'grid';
       } else {

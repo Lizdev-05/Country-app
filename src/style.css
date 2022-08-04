@@ -168,3 +168,43 @@ main {
   color: var(--White);
   font-weight: 300;
 }
+
+
+@media screen and (max-width: 768px) {
+.global{
+  max-width: 100%;
+}
+
+nav{
+  max-width: 100%;
+}
+
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 1.5rem;
+  }
+
+  .card .card-image {
+    height: 15rem;
+  }
+
+  .card .card-text {
+    padding: 1rem 1rem;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .global{
+    max-width: 100%;
+  }
+
+  nav{
+    max-width: 100%;
+    
+  }
+
+  .cards {
+    grid-template-columns: repeat(1, 1fr);
+    padding: 1rem;
+  }
+}
