@@ -4,6 +4,7 @@
   "description": "",
   "private": true,
   "scripts": {
+    "deploy": "gh-pages -d dist",
     "test": "echo \"Error: no test specified\" && exit 1",
     "watch": "webpack --watch",
     "start": "webpack serve --open",
@@ -12,22 +13,22 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Lizdev-05/Web-package.git"
+    "url": "git+https://github.com/Lizdev-05/Country-app"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Lizdev-05/Web-package/issues"
+    "url": "https://github.com/Lizdev-05/Country-app"
   },
-  "homepage": "https://github.com/Lizdev-05/Web-package#readme",
+  "homepage": "https://github.com/Lizdev-05/Country-app",
   "devDependencies": {
     "babel-eslint": "^10.1.0",
     "css-loader": "^6.7.1",
     "eslint": "^7.32.0",
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-plugin-import": "^2.26.0",
-    "hint": "^7.1.0",
+    "hint": "^7.1.1",
     "html-webpack-plugin": "^5.5.0",
     "style-loader": "^3.3.1",
     "stylelint": "^13.13.1",
@@ -38,8 +39,9 @@
     "webpack-dev-server": "^4.9.3"
   },
   "dependencies": {
-    "lodash": "^4.17.21",
     "express": "^4.18.1",
+    "gh-pages": "^4.0.0",
+    "lodash": "^4.17.21",
     "webpack": "^5.73.0",
     "webpack-dev-middleware": "^5.3.3"
   }

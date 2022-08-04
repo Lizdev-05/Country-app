@@ -1,0 +1,216 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap');
+
+:root {
+  --Dark-Blue: hsl(209, 23%, 22%);
+  --Very-Dark-Blue: hsl(207, 26%, 17%);
+  --Very-Dark-Black: hsl(200, 15%, 8%);
+  --Dark-Gray: hsl(0, 0%, 52%);
+  --Very-Light-Gray: hsl(0, 0%, 98%);
+  --White: hsl(0, 0%, 100%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  text-decoration: none;
+  transition: all 0.3s linear;
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+html {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--Very-Dark-Blue);
+}
+
+.global {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+header {
+  background-color: var(--Dark-Blue);
+  margin-bottom: 2rem;
+}
+
+nav {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  color: var(--White);
+  font-size: 1.2rem;
+  font-weight: 800;
+}
+
+.search {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  color: var(--White);
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.search a {
+  color: var(--White);
+  font-size: 1.2rem;
+}
+
+.search input {
+  padding: 0.5rem;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--Very-Light-Gray);
+  color: var(--Dark-Gray);
+  font-size: 1.2rem;
+}
+
+.dropbtn {
+  background-color: var(--Dark-Blue);
+  color: var(--White);
+  padding: 1rem;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+  border-radius: 0.5rem;
+}
+
+.dropdown-content {
+  margin-top: 1.5rem;
+  border-radius: 0.5rem;
+  display: none;
+}
+
+.fa-circle-chevron-down {
+  background-color: var(--Dark-Blue);
+  font-size: 1rem;
+}
+
+.showdropdown {
+  margin-top: 1.5rem;
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--Dark-Blue);
+  min-width: 160px;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content li {
+  list-style: none;
+}
+
+.dropdown-content a {
+  color: var(--White);
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown i {
+  margin-left: 0.5rem;
+}
+
+.refresh {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+main {
+  margin: 0 auto;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 1rem;
+  margin-top: 2rem;
+}
+
+.card .card-image {
+  background-color: var(--Dark-Blue);
+  height: 13rem;
+  width: 100%;
+  border-radius: 0.5rem;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.card .card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card .card-text {
+  padding: 2rem 1rem;
+  background-color: var(--Dark-Blue);
+  line-height: 1.5;
+}
+
+.card-text span {
+  line-height: 1.5;
+  font-weight: 800;
+}
+
+.card .card-text h3 {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: var(--White);
+  margin-bottom: 1rem;
+}
+
+.card .card-text p {
+  font-size: 1rem;
+  color: var(--White);
+  font-weight: 300;
+}
+
+@media screen and (max-width: 768px) {
+  .global {
+    max-width: 100%;
+  }
+
+  nav {
+    max-width: 100%;
+  }
+
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 1.5rem;
+  }
+
+  .card .card-image {
+    height: 15rem;
+  }
+
+  .card .card-text {
+    padding: 1rem 1rem;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .global {
+    max-width: 100%;
+  }
+
+  nav {
+    max-width: 100%;
+  }
+
+  .cards {
+    grid-template-columns: repeat(1, 1fr);
+    padding: 1rem;
+  }
+}

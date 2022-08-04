@@ -1,11 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Country App</title>
-<script defer src="/runtime.bundle.js"></script><script defer src="/index.bundle.js"></script></head>
-<body>
-  
-</body>
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css
+    "
+    />
+  <script defer src="/Country-app/runtime.bundle.js"></script><script defer src="/Country-app/index.bundle.js"></script></head>
+  <body>
+    <header class="">
+      <nav>
+        <h1>Where in the world</h1>
+        <h2><i class="fa-solid fa-moon"></i> Dark mode</h2>
+      </nav>
+    </header>
+    <div class="global">
+      <div class="search">
+        <form class="search-form">
+          <input
+            type="search"
+            name="search"
+            placeholder="search here..."
+            id="search-box"
+          />
+          <i class="fa-solid fa-rotate-left refresh"></i>
+        </form>
+        <div class="dropdown">
+          <span class="dropbtn">
+            Filter by Region <i class="fa-solid fa-circle-chevron-down"></i>
+          </span>
+          <div class="dropdown-content">
+           <ul>
+            <li class="region"><a href="#">All</a></li>
+            <li class="region"><a href="#">Africa</a></li>
+            <li class="region"><a href="#">America</a></li>
+            <li class="region"><a href="#">Asia</a></li>
+            <li class="region"><a href="#">Europe</a></li>
+            <li class="region"><a href="#">Oceania</a></li>
+           </ul>
+          </div>
+        </div>
+      </div>
+      <main>
+        <div class="cards"></div>
+      </main>
+    </div>
+  </body>
 </html>
