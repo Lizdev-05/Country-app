@@ -4,6 +4,7 @@ const dropBtn = document.querySelector('.dropbtn');
 const dropDownContent = document.querySelector('.dropdown-content');
 const search = document.querySelector('#search-box');
 const region = document.querySelectorAll('.region');
+const refresh = document.querySelector('.refresh');
 
 const showCountry = (data) => {
   const cardContainer = document.createElement('div');
@@ -64,4 +65,8 @@ search.addEventListener('keyup', () => {
       elem.closest('.card').style.display = 'none';
     }
   });
+});
+
+refresh.addEventListener('click', () => {
+  display();
 });
