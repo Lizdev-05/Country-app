@@ -19,7 +19,7 @@ In this project, you are expected to setup Html-CSS-Javascript linter, and webpa
 - Linters
 
 ## Live Demo 
-[Click to check my awesome book shelf](https://lizdev-05.github.io/Country-app/)
+[Click to check the countries in the world](https://lizdev-05.github.io/Country-app/)
 
 ## Getting Started
 To get a local copy up and running follow these simple example steps.
